@@ -1,80 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Tools for Development</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+/* General Reset and Typography */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1E272E;
+  color: #F8F9FA;
+}
 
-  <!-- Header with Responsive Nav -->
-  <header>
-    <nav>
-      <div class="logo">AI Tools</div>
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Chatbots</a></li>
-        <li><a href="#">Sitebuilders</a></li>
-        <li><a href="#">Code Builders</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-  </header>
+h1, h2, h3, h4, h5, h6 {
+  color: #F8F9FA;
+  margin-bottom: 0.5rem;
+}
 
-  <!-- Hero Section -->
-  <section class="section-dark">
-    <div class="container">
-      <h1>AI Tools for Development</h1>
-      <p>Explore a curated set of powerful AI tools categorized to supercharge your workflow.</p>
-    </div>
-  </section>
+p {
+  color: #B5ACA5;
+  line-height: 1.6;
+}
 
-  <!-- Categories Section -->
-  <section class="section">
-    <div class="container">
-      <h2>Explore by Category</h2>
-      <div class="card-container">
-        <div class="card">
-          <h3>Chatbots</h3>
-          <p>Interact with AI-powered assistants for customer service, education, and more.</p>
-          <button>Explore Chatbots</button>
-        </div>
-        <div class="card">
-          <h3>Sitebuilders</h3>
-          <p>Build and design websites using intuitive AI tools and templates.</p>
-          <button>Explore Sitebuilders</button>
-        </div>
-        <div class="card">
-          <h3>Code Builders</h3>
-          <p>Generate, review, and optimize code using AI development assistants.</p>
-          <button>Explore Code Builders</button>
-        </div>
-      </div>
-    </div>
-  </section>
+/* Layout */
+header, footer {
+  background-color: #070605;
+  padding: 1rem 2rem;
+  color: #F8F9FA;
+  text-align: center;
+}
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 AI Tools for Development. All rights reserved.</p>
-  </footer>
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
 
-  <!-- JavaScript for Responsive Toggle -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.getElementById("nav-toggle");
-      const navLinks = document.getElementById("nav-links");
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
-      toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-      });
-    });
-  </script>
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
 
-</body>
-</html>
+.nav-toggle span {
+  background-color: #F8F9FA;
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #F8F9FA;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  color: #00A8E8;
+}
+
+.section {
+  padding: 3rem 2rem;
+  background-color: #F8F9FA;
+  color: #1E272E;
+}
+
+.section-dark {
+  background-color: #1E272E;
+  color: #F8F9FA;
+  padding: 3rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #F8F9FA;
+  border: 1px solid #B5ACA5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1 1 30%;
+  color: #1E272E;
+}
+
+.card h3 {
+  color: #1E272E;
+}
+
+/* Buttons */
+button, .btn {
+  background-color: #00A8E8;
+  color: #F8F9FA;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+button:hover, .btn:hover {
+  background-color: #6C5CE7;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  background-color: #070605;
+  color: #F8F9FA;
+  border-top: 1px solid #4A535A;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
