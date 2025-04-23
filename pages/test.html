@@ -1,80 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Tools for Development</title>
-  <link rel="stylesheet" href="tools-style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Group 3"> 
+  <meta name="description" content="Use of AI as a tool in website development">
+  <meta name="keywords" content="AI, website creation, artificial intelligence, development tools">
+  <link href="styles/homepage-style.css" rel="stylesheet"> 
+  <title>Empowering Web Development with AI</title>  
 </head>
 <body>
+  <div class="grid-container">
 
-  <!-- Header with Responsive Nav -->
-  <header>
-    <nav>
-      <div class="logo">AI Tools</div>
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Chatbots</a></li>
-        <li><a href="#">Sitebuilders</a></li>
-        <li><a href="#">Code Builders</a></li>
-        <li><a href="#">About</a></li>
+    <!-- NAV -->
+    <nav class="main-nav">
+      <div class="logo">AI Tools for Development</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/chatbots.html">Chatbots</a></li>
+        <li><a href="pages/sitebuilders.html">Sitebuilders</a></li>
+        <li><a href="pages/editors.html">Code Builders</a></li>
+        <li><a href="pages/about.html">About</a></li>
       </ul>
     </nav>
-  </header>
+           
+    <!-- HERO -->
+    <header class="hero">
+      <h1>Empowering Web Development with AI</h1>
+      <p>This platform explores a range of advanced AI tools that facilitate the design, development, and optimization of websites, offering innovative solutions for both technical and non-technical users.</p>
+      <a href="pages/about.html" class="btn-primary">Learn more about the project</a>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="section-dark">
-    <div class="container">
-      <h1>AI Tools for Development</h1>
-      <p>Explore a curated set of powerful AI tools categorized to supercharge your workflow.</p>
-    </div>
-  </section>
-
-  <!-- Categories Section -->
-  <section class="section">
-    <div class="container">
-      <h2>Explore by Category</h2>
-      <div class="card-container">
-        <div class="card">
-          <h3>Chatbots</h3>
-          <p>Interact with AI-powered assistants for customer service, education, and more.</p>
-          <button>Explore Chatbots</button>
+    <main>
+      <!-- MISSION -->
+      <section class="mission-statement">
+        <p>Our mission is to explore the transformative role of artificial intelligence in the end-to-end development of websites, with a particular focus on code generation tools and their practical applications in streamlining and enhancing the web development process.</p>
+      </section>
+      
+      <!-- FEATURED TOOLS (3-column) -->
+      <section class="featured-tools" aria-labelledby="featured-tools-heading">
+        <h2 id="featured-tools-heading">Featured Tools</h2>
+        <p>These tools employ AI to refine the processes of designing and developing websites. Review each selection below:</p>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <a href="pages/chatbots.html">
+              <img src="images/chatbots.png" alt="AI Chatbots" />
+              <h3>AI Chatbots</h3>
+              <p>Enhance user engagement with conversational assistants that guide visitors and answer questions in real time.</p>
+            </a>
+          </div>
+          <div class="tool-card">
+            <a href="pages/sitebuilders.html">
+              <img src="images/sitebuilders.png" alt="AI Sitebuilders" />
+              <h3>AI Sitebuilders</h3>
+              <p>Create fully responsive websites in minutes using drag-and-drop builders powered by AI.</p>
+            </a>
+          </div>
+          <div class="tool-card">
+            <a href="pages/editors.html">
+              <img src="images/code-editors.png" alt="AI Code Editors" />
+              <h3>AI Code Editors</h3>
+              <p>Streamline the coding process with auto-completion, templates, and real-time error detection.</p>
+            </a>
+          </div>
         </div>
-        <div class="card">
-          <h3>Sitebuilders</h3>
-          <p>Build and design websites using intuitive AI tools and templates.</p>
-          <button>Explore Sitebuilders</button>
+      </section>
+
+      <!-- WHY AI (4-icon grid) -->
+      <section class="why-ai" aria-labelledby="why-ai-heading">
+        <h2 id="why-ai-heading">Why use AI to build websites?</h2>
+        <div class="why-ai-grid">
+          <div class="why-card">
+            <img src="images/icon-speed.svg" alt="" aria-hidden="true">
+            <h3>Faster Development</h3>
+            <p>Generate boilerplate code and prototypes instantly to move from idea to working product in record time.</p>
+          </div>
+          <div class="why-card">
+            <img src="images/icon-quality.svg" alt="" aria-hidden="true">
+            <h3>Improved Quality</h3>
+            <p>Catch bugs early with AI-driven testing and receive suggestions to optimize performance and accessibility.</p>
+          </div>
+          <div class="why-card">
+            <img src="images/icon-custom.svg" alt="" aria-hidden="true">
+            <h3>Personalization</h3>
+            <p>Adapt layouts, copy, and styles based on user data to deliver tailored experiences at scale.</p>
+          </div>
+          <div class="why-card">
+            <img src="images/icon-scale.svg" alt="" aria-hidden="true">
+            <h3>Scalability</h3>
+            <p>Automate repetitive tasks so teams can focus on creative work and scale projects without scaling costs.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Code Builders</h3>
-          <p>Generate, review, and optimize code using AI development assistants.</p>
-          <button>Explore Code Builders</button>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 AI Tools for Development. All rights reserved.</p>
-  </footer>
-
-  <!-- JavaScript for Responsive Toggle -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.getElementById("nav-toggle");
-      const navLinks = document.getElementById("nav-links");
-
-      toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-      });
-    });
-  </script>
-
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>&copy; 2025, Group 3</p> 
+      <p><a href="mailto:info@group3.fi">Contact</a></p>
+    </footer>
+  </div>
 </body>
 </html>
