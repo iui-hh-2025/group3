@@ -7,7 +7,7 @@
   <meta name="description" content="Use of AI as a tool in website development">
   <meta name="keywords" content="AI, website creation, artificial intelligence, development tools">
 
-  <!-- correct path up one level -->
+  <!-- ← Fix: go up one level into /styles/ -->
   <link href="../styles/homepage-style.css" rel="stylesheet"> 
   <title>Empowering Web Development with AI</title>  
 </head>
@@ -18,9 +18,9 @@
     <nav class="main-nav">
       <div class="logo">AI Tools for Development</div>
       <ul class="nav-links">
-        <!-- root homepage -->
+        <!-- ← Fix: point back to root index -->
         <li><a href="../index.html">Home</a></li>
-        <!-- same-folder pages -->
+        <!-- these pages all live alongside test.html -->
         <li><a href="chatbots.html">Chatbots</a></li>
         <li><a href="sitebuilders.html">Sitebuilders</a></li>
         <li><a href="editors.html">Code Builders</a></li>
@@ -32,6 +32,7 @@
     <header class="hero">
       <h1>Empowering Web Development with AI</h1>
       <p>This platform explores a range of advanced AI tools that facilitate the design, development, and optimization of websites, offering innovative solutions for both technical and non-technical users.</p>
+      <!-- internal link to about.html in same folder -->
       <a href="about.html" class="btn-primary">Learn more about the project</a>
     </header>
 
@@ -48,22 +49,22 @@
         <div class="tools-grid">
           <div class="tool-card">
             <a href="chatbots.html">
-              <!-- up one level into /images/ -->
-              <img src="../images/chatbots.png" alt="AI Chatbots" />
+              <!-- ← Fix: go up into /images/ -->
+              <img src="../images/chatbots.png" alt="AI Chatbots">
               <h3>AI Chatbots</h3>
               <p>Enhance user engagement with conversational assistants that guide visitors and answer questions in real time.</p>
             </a>
           </div>
           <div class="tool-card">
             <a href="sitebuilders.html">
-              <img src="../images/sitebuilders.png" alt="AI Sitebuilders" />
+              <img src="../images/sitebuilders.png" alt="AI Sitebuilders">
               <h3>AI Sitebuilders</h3>
               <p>Create fully responsive websites in minutes using drag-and-drop builders powered by AI.</p>
             </a>
           </div>
           <div class="tool-card">
             <a href="editors.html">
-              <img src="../images/code-editors.png" alt="AI Code Editors" />
+              <img src="../images/code-editors.png" alt="AI Code Editors">
               <h3>AI Code Editors</h3>
               <p>Streamline the coding process with auto-completion, templates, and real-time error detection.</p>
             </a>
