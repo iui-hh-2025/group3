@@ -6,7 +6,9 @@
   <meta name="author" content="Group 3"> 
   <meta name="description" content="Use of AI as a tool in website development">
   <meta name="keywords" content="AI, website creation, artificial intelligence, development tools">
-  <link href="styles/homepage-style.css" rel="stylesheet"> 
+
+  <!-- correct path up one level -->
+  <link href="../styles/homepage-style.css" rel="stylesheet"> 
   <title>Empowering Web Development with AI</title>  
 </head>
 <body>
@@ -16,11 +18,13 @@
     <nav class="main-nav">
       <div class="logo">AI Tools for Development</div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/chatbots.html">Chatbots</a></li>
-        <li><a href="pages/sitebuilders.html">Sitebuilders</a></li>
-        <li><a href="pages/editors.html">Code Builders</a></li>
-        <li><a href="pages/about.html">About</a></li>
+        <!-- root homepage -->
+        <li><a href="../index.html">Home</a></li>
+        <!-- same-folder pages -->
+        <li><a href="chatbots.html">Chatbots</a></li>
+        <li><a href="sitebuilders.html">Sitebuilders</a></li>
+        <li><a href="editors.html">Code Builders</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
            
@@ -28,7 +32,7 @@
     <header class="hero">
       <h1>Empowering Web Development with AI</h1>
       <p>This platform explores a range of advanced AI tools that facilitate the design, development, and optimization of websites, offering innovative solutions for both technical and non-technical users.</p>
-      <a href="pages/about.html" class="btn-primary">Learn more about the project</a>
+      <a href="about.html" class="btn-primary">Learn more about the project</a>
     </header>
 
     <main>
@@ -43,22 +47,23 @@
         <p>These tools employ AI to refine the processes of designing and developing websites. Review each selection below:</p>
         <div class="tools-grid">
           <div class="tool-card">
-            <a href="pages/chatbots.html">
-              <img src="images/chatbots.png" alt="AI Chatbots" />
+            <a href="chatbots.html">
+              <!-- up one level into /images/ -->
+              <img src="../images/chatbots.png" alt="AI Chatbots" />
               <h3>AI Chatbots</h3>
               <p>Enhance user engagement with conversational assistants that guide visitors and answer questions in real time.</p>
             </a>
           </div>
           <div class="tool-card">
-            <a href="pages/sitebuilders.html">
-              <img src="images/sitebuilders.png" alt="AI Sitebuilders" />
+            <a href="sitebuilders.html">
+              <img src="../images/sitebuilders.png" alt="AI Sitebuilders" />
               <h3>AI Sitebuilders</h3>
               <p>Create fully responsive websites in minutes using drag-and-drop builders powered by AI.</p>
             </a>
           </div>
           <div class="tool-card">
-            <a href="pages/editors.html">
-              <img src="images/code-editors.png" alt="AI Code Editors" />
+            <a href="editors.html">
+              <img src="../images/code-editors.png" alt="AI Code Editors" />
               <h3>AI Code Editors</h3>
               <p>Streamline the coding process with auto-completion, templates, and real-time error detection.</p>
             </a>
@@ -71,22 +76,22 @@
         <h2 id="why-ai-heading">Why use AI to build websites?</h2>
         <div class="why-ai-grid">
           <div class="why-card">
-            <img src="images/icon-speed.svg" alt="" aria-hidden="true">
+            <img src="../images/icon-speed.svg" alt="" aria-hidden="true">
             <h3>Faster Development</h3>
             <p>Generate boilerplate code and prototypes instantly to move from idea to working product in record time.</p>
           </div>
           <div class="why-card">
-            <img src="images/icon-quality.svg" alt="" aria-hidden="true">
+            <img src="../images/icon-quality.svg" alt="" aria-hidden="true">
             <h3>Improved Quality</h3>
             <p>Catch bugs early with AI-driven testing and receive suggestions to optimize performance and accessibility.</p>
           </div>
           <div class="why-card">
-            <img src="images/icon-custom.svg" alt="" aria-hidden="true">
+            <img src="../images/icon-custom.svg" alt="" aria-hidden="true">
             <h3>Personalization</h3>
             <p>Adapt layouts, copy, and styles based on user data to deliver tailored experiences at scale.</p>
           </div>
           <div class="why-card">
-            <img src="images/icon-scale.svg" alt="" aria-hidden="true">
+            <img src="../images/icon-scale.svg" alt="" aria-hidden="true">
             <h3>Scalability</h3>
             <p>Automate repetitive tasks so teams can focus on creative work and scale projects without scaling costs.</p>
           </div>
@@ -99,6 +104,7 @@
       <p>&copy; 2025, Group 3</p> 
       <p><a href="mailto:info@group3.fi">Contact</a></p>
     </footer>
+    
   </div>
 </body>
 </html>
