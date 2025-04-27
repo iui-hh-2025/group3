@@ -100,15 +100,15 @@ body {
 }
 
 .mission-box {
-    background-color: #f8d8b0; /* Approximate orange color */
-    padding: 3rem 2rem; /* Padding inside the orange box (top/bottom 3rem, left/right 2rem) */
+    background-color: #ffad69; /* Approximate orange color */
+    /* Adjusted padding: 3rem top/bottom, 1.5rem left/right */
+    padding: 3rem 1.5rem;
     text-align: center;
-    /* Ensure max-width allows it to be wide enough */
-    max-width: 800px; /* Adjust this value if you need it wider or narrower */
+    max-width: 100px; /* Adjust this value if you need it wider or narrower */
     margin: 0 auto; /* Center the orange box */
     border-radius: 8px;
-    /* Ensure no conflicting width properties are applied */
-    width: auto;
+    width: auto; /* Ensure it's not fixed width */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .mission-section h2 {
