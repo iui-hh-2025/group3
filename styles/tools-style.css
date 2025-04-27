@@ -15,7 +15,6 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-dark);
-    background-color: var(--bg-light); /* Ensure body has light background */
 }
 
 .container {
@@ -156,6 +155,7 @@ li {
 /* --- Section Styling --- */
 section {
     margin-bottom: 0; /* Removed margin-bottom from sections */
+    padding: 40px 0; /* Added vertical padding to sections */
 }
 
 .overview-section,
