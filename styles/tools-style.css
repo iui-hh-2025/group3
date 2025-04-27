@@ -188,7 +188,8 @@ body {
 .why-ai-content {
     display: flex;
     flex-wrap: wrap; /* Allow columns to stack */
-    gap: 30px; /* Space between columns */
+    /* Increased the gap between the image and the text/benefits */
+    gap: 80px; /* Or more if you want greater spacing */
     align-items: center; /* Vertically align items */
 }
 
