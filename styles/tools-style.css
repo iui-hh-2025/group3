@@ -130,6 +130,7 @@ li {
 
 .hero-content {
     flex: 1; /* Allow text content to take up available space */
+    padding: 20px; /* Added padding all around the content */
 }
 
 .hero h2 {
@@ -185,7 +186,7 @@ section {
     background-color: var(--text-light); /* White background for example boxes */
     border: 1px solid var(--border-light);
     margin-bottom: 30px;
-    padding: 20px;
+    /* Removed padding from example-item to apply it to example-content instead */
     display: flex; /* Use flexbox for layout */
     gap: 20px; /* Space between logo and content */
     border-radius: 5px;
@@ -224,6 +225,7 @@ section {
 
 .example-content {
     flex-grow: 1; /* Allow content to take up remaining space */
+    padding: 20px; /* Added padding all around the content */
 }
 
 .example-content h3,
@@ -298,6 +300,7 @@ section {
 
     .hero-content {
         text-align: center; /* Center text when stacked */
+        padding: 15px; /* Adjust padding for smaller screens */
     }
 
     .hero-image-placeholder {
