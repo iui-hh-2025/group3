@@ -155,7 +155,6 @@ li {
 
 /* --- Section Styling --- */
 section {
-    padding: 40px 0; /* Added vertical padding to sections */
     margin-bottom: 0; /* Removed margin-bottom from sections */
 }
 
@@ -168,6 +167,7 @@ section {
     background-color: #4a6a8a; /* Darker background for contrast */
     color: var(--text-light); /* Light text color for this section */
     padding-top: 40px;
+    padding-bottom:40px;
 }
 
 /* Specific style for H2 in examples section */
