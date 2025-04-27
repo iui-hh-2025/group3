@@ -110,6 +110,38 @@ li {
     color: #f88379; /* Hover color */
 }
 
+/* Hamburger Icon Styles */
+.hamburger-icon {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.hamburger-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #f0f0f0; /* Color of the bars */
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styles for when the menu is active (optional: animate icon) */
+.hamburger-icon.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 /* --- Hero Section --- */
 .hero {
     background-color: #fff;
@@ -293,15 +325,46 @@ section {
     .site-header .container {
         flex-direction: column;
         text-align: center;
+        align-items: flex-start; /* Align items to the start on mobile */
+        position: relative; /* Needed for absolute positioning of icon */
+    }
+
+    .site-title {
+        /* Adjust margin if needed when stacked */
+        margin-bottom: 10px;
+    }
+
+    .hamburger-icon {
+        display: block; /* Show hamburger on small screens */
+        position: absolute; /* Position icon absolutely */
+        top: 15px; /* Adjust vertical position */
+        right: 15px; /* Adjust horizontal position */
+    }
+
+    .site-nav {
+        width: 100%; /* Navigation takes full width */
+        max-height: 0; /* Hide navigation by default */
+        overflow: hidden; /* Hide content that overflows */
+        transition: max-height 0.3s ease-in-out; /* Smooth transition */
+        background-color: #2a2a2a; /* Optional: Darker background for dropdown */
+    }
+
+    .site-nav.active {
+        max-height: 300px; /* Show navigation (adjust height as needed) */
     }
 
     .site-nav ul {
-        margin-top: 1rem;
-        justify-content: center;
+        flex-direction: column; /* Stack nav links vertically */
+        align-items: center; /* Center links */
+        padding: 20px 0; /* Add padding inside the dropdown */
     }
 
     .site-nav li {
-        margin: 0 10px;
+        margin: 10px 0; /* Space between stacked links */
+    }
+
+    .site-nav a {
+        color: #f0f0f0; /* Ensure link color is visible on dark background */
     }
 
     .hero .container {
