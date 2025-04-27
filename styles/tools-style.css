@@ -127,7 +127,7 @@ body {
     background-color: #4a6a8a; /* Approximate dark blue */
     color: #fff;
     padding: 3rem 0;
-    text-align: center;
+    text-align: center; /* Center the overall section text */
 }
 
 .featured-tools-section h2 {
@@ -138,15 +138,7 @@ body {
 
 .featured-tools-section p {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-.tools-grid {
-    display: grid;
-    /* This creates responsive columns. Adjust the minmax value if needed. */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Space between cards */
-    margin-top: 2rem;
+    margin-bottom: 2rem; /* Space below the section description */
 }
 
 .tools-grid {
@@ -158,59 +150,35 @@ body {
 }
 
 .tool-card {
-    background-color: #5a7a9a; /* Background color of the bottom text part */
+    background-color: #5a7a9a; /* Background color for the entire card */
+    padding: 2rem; /* Add padding inside the card */
     border-radius: 8px;
-    overflow: hidden; /* Ensures rounded corners */
-    display: flex; /* Use flexbox for vertical layout inside the card */
-    flex-direction: column; /* Stack image and text box vertically */
-    text-align: center; /* Center content horizontally */
+    text-align: center; /* Center content inside the card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: auto; /* Let height be determined by content, or set a min/max height if desired */
+    /* Removed display: flex, flex-direction, overflow: hidden */
 }
 
 .tool-card img {
-    display: block;
-    width: 100%; /* Image fills the width of the card */
-    /* Removed flex-grow: 1 */
-    height: 200px; /* Set a fixed height for the image area, adjust as needed */
-    object-fit: cover; /* Crop image to fit the area */
-    object-position: center;
-    margin-bottom: 0;
-}
-
-.tool-card-text {
-    background-color: #5a7a9a; /* Background of the text box */
-    padding: 1.5rem; /* Padding inside the text box */
-    color: #fff;
-    flex-shrink: 0; /* Prevent shrinking */
-    flex-grow: 0; /* Prevent growing */
-    /* Ensure text box takes minimum required height */
+    display: block; /* Make image a block element */
+    /* Set a max-width appropriate for the icons/images in the original design */
+    max-width: 100px;
     height: auto;
-}
-
-.tool-card-text h3 {
-    margin-top: 0;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-}
-
-.tool-card-text p {
-    margin: 0;
-    font-size: 1rem;
-    color: #ccc;
+    /* Center the image horizontally */
+    margin: 0 auto 1rem auto; /* 0 top, auto left/right (centers), 1rem bottom */
 }
 
 .tool-card h3 {
-    margin-top: 0;
+    margin-top: 0; /* Remove default top margin */
     font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* Space below heading */
     color: #fff;
 }
 
 .tool-card p {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 0; /* Remove default bottom margin */
     font-size: 1rem;
-    color: #ccc; /* Lighter text color */
+    color: #ccc;
 }
 
 /* Why Use AI Section */
@@ -333,7 +301,10 @@ body {
     }
 
     .tool-card img {
-         height: 150px; /* Adjust image height on smaller screens */
-         object-fit: cover;
+         max-width: 80px; /* Smaller size on small screens */
+         height: auto;
     }
+     .tool-card {
+         padding: 1.5rem; /* Slightly less padding on small screens */
+     }
 }
