@@ -104,7 +104,7 @@ body {
     /* Adjusted padding: 3rem top/bottom, 1.5rem left/right */
     padding: 3rem 2rem;
     text-align: center;
-    max-width: 1000px; /* Adjust this value if you need it wider or narrower */
+    max-width: 1200px; /* Adjust this value if you need it wider or narrower */
     margin: 0 auto; /* Center the orange box */
     border-radius: 8px;
     width: auto; /* Ensure it's not fixed width */
@@ -170,8 +170,8 @@ body {
 }
 
 .tool-card-image-area {
-    background-color: #fff; /* White/light gray background for image area */
-    padding: 2rem 1rem; /* Padding around the image */
+    /* Removed background-color */
+    padding: 0; /* Removed padding to allow image to go edge-to-edge in this area */
     flex-grow: 1; /* Allows the image area to take up available vertical space */
     display: flex; /* Use flex to help center image */
     justify-content: center; /* Center image horizontally */
@@ -181,13 +181,16 @@ body {
 
 .tool-card img {
     display: block;
-    max-width: 120px; /* Adjust max-width for the icon size */
-    height: auto;
+    width: 100%; /* Image spans the width of its container (.tool-card-image-area) */
+    height: auto; /* Maintain aspect ratio */
+    max-width: none; /* Removed max-width to allow it to fill the space */
+    object-fit: cover; /* Crop image to cover the area if aspect ratio doesn't match */
+    object-position: center; /* Center the image within the area */
     margin: 0; /* Remove default image margin */
 }
 
 .tool-card-text {
-    background-color: #C8EFFF; /* Light blue/cyan background from Figma */
+    background-color: #C8EFFF; /* Light blue/cyan background */
     padding: 1.5rem 1rem; /* Padding inside the text box */
     color: #333; /* Darker text color for contrast on light background */
     flex-shrink: 0; /* Prevent the text box from shrinking */
@@ -198,18 +201,18 @@ body {
 
 .tool-card-text h3 {
     margin-top: 0;
-    font-size: 1.2rem; /* Adjusted font size */
-    margin-bottom: 0.4rem; /* Space below heading */
-    color: #333; /* Heading color */
-    font-weight: 400; /* Match Figma font weight */
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    color: #333;
+    font-weight: 400;
 }
 
 .tool-card-text p {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 0.9rem; /* Adjusted font size */
-    color: #555; /* Paragraph color */
-     font-weight: 500; /* Match Figma font weight */
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
 }
 
 /* Why Use AI Section */
@@ -332,15 +335,16 @@ body {
     }
 
     .tool-card-image-area {
-        padding: 1.5rem 0.8rem; /* Adjust padding on small screens */
+        padding: 0; /* Keep padding at 0 for smaller screens */
     }
 
     .tool-card img {
-         max-width: 80px; /* Smaller size on small screens */
+         width: 100%; /* Still fill width */
          height: auto;
+         object-fit: cover;
     }
      .tool-card-text {
-         padding: 1rem 0.8rem; /* Adjust padding on small screens */
+         padding: 1rem 0.8rem;
      }
      .tool-card-text h3 {
          font-size: 1.1rem;
