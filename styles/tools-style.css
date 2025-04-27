@@ -59,7 +59,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background-color: #F88379;
+    background-color: #f88379;
     color: #fff;
     text-align: center;
     padding: 4rem 0;
@@ -81,7 +81,7 @@ body {
 
 .btn {
     display: inline-block;
-    background-color: #5a5a7a;
+    background-color: #5a5a7a; /* Approximate dark blue/purple */
     color: #fff;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -95,9 +95,17 @@ body {
 
 /* Mission Section */
 .mission-section {
-    background-color: #FFAD69; 
+    background-color: #fff; /* White background */
     padding: 3rem 0;
+}
+
+.mission-box {
+    background-color: #ffad69;
+    padding: 2rem; /* Added padding inside the orange box */
     text-align: center;
+    max-width: 800px; /* Control the width of the orange box */
+    margin: 0 auto; /* Center the orange box */
+    border-radius: 8px; /* Optional: Add rounded corners */
 }
 
 .mission-section h2 {
@@ -108,13 +116,14 @@ body {
 
 .mission-section p {
     font-size: 1.1rem;
-    max-width: 800px;
-    margin: 1rem auto 0 auto;
+    margin-top: 1rem; /* Add space below heading */
+    margin-bottom: 0; /* Remove bottom margin if not needed */
 }
+
 
 /* Featured Tools Section */
 .featured-tools-section {
-    background-color: #4a6a8a;
+    background-color: #4a6a8a; /* Approximate dark blue */
     color: #fff;
     padding: 3rem 0;
     text-align: center;
@@ -133,7 +142,8 @@ body {
 
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    /* Adjusted minmax for slightly bigger cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px; /* Space between grid items */
     margin-top: 2rem;
 }
@@ -143,12 +153,17 @@ body {
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
+    /* Optional: Add a slight box-shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tool-card img {
-    max-width: 100px;
+    /* Ensure image is at least 200px wide */
+    min-width: 200px;
+    max-width: 100%; /* Prevent image from overflowing its container */
     height: auto;
-    margin-bottom: 1rem;
+    display: block; /* Make image a block element for easier centering */
+    margin: 0 auto 1rem auto; /* Center the image and add bottom margin */
 }
 
 .tool-card h3 {
@@ -213,6 +228,12 @@ body {
     font-size: 1.8rem; /* Icon size */
     color: #4a6a8a; /* Icon color */
     margin-right: 15px;
+    /* Ensure icon doesn't shrink if text is long */
+    flex-shrink: 0;
+}
+
+.why-ai-benefits li div {
+    flex-grow: 1; /* Allow text div to take up remaining space */
 }
 
 .why-ai-benefits li h4 {
@@ -230,7 +251,7 @@ body {
 
 /* Footer Styles */
 .site-footer {
-    background-color: #50590D;
+    background-color: #50590d;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -269,5 +290,15 @@ body {
     .why-ai-benefits {
         flex-basis: auto; /* Allow items to take necessary width */
         width: 100%; /* Ensure they take full width */
+    }
+
+    .mission-box {
+        padding: 1.5rem; /* Slightly less padding on small screens */
+    }
+
+    .tool-card img {
+         min-width: unset; /* Remove min-width restriction on small screens */
+         width: 150px; /* Set a specific smaller width */
+         height: auto;
     }
 }
