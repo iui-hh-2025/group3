@@ -100,10 +100,11 @@ body {
 }
 
 .mission-box {
-    background-color: #ffad69;
-    padding: 2rem; /* Added padding inside the orange box */
+    background-color: #ffad69; /* Approximate orange color */
+    /* Increased padding to make the box longer vertically */
+    padding: 3rem 2rem; /* 3rem top/bottom, 2rem left/right */
     text-align: center;
-    max-width: 1100px; /* Control the width of the orange box */
+    max-width: 800px; /* Control the width of the orange box */
     margin: 0 auto; /* Center the orange box */
     border-radius: 8px; /* Optional: Add rounded corners */
 }
