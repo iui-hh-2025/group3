@@ -64,8 +64,8 @@ li {
 
 /* Header Styles */
 .site-header {
-    background-color: #1e1e1f; /* Keep your background color */
-    padding: 1rem 0; /* Increased vertical padding */
+    background-color: #1e1e1f;
+    padding: 1rem 0; /* This controls the vertical padding */
 }
 
 .site-header .container {
@@ -255,31 +255,29 @@ section {
 
 /* Footer Styles */
 .site-footer {
-    background-color: #50590d; /* Keep your background color */
+    background-color: #50590d;
     color: #fff;
     text-align: center;
-    padding: 1rem 0; /* Increased vertical padding to match header and reference site */
+    padding: 1rem 0; /* This controls the vertical padding */
     font-size: 0.9rem;
 }
 
 /* --- Responsive Adjustments (Basic) --- */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-
-    header .container {
+    .site-header .container {
         flex-direction: column;
         text-align: center;
     }
 
-    header h1 {
-        margin-bottom: 10px;
+    .site-nav ul {
+        margin-top: 1rem;
+        justify-content: center;
     }
 
-    header nav a {
+    .site-nav li {
         margin: 0 10px;
     }
+}
 
     /* Stack hero content and image on small screens */
     .hero .container {
