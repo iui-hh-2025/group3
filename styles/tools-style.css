@@ -188,6 +188,7 @@ section {
     margin-bottom: 30px;
     padding: 20px; /* Apply padding to the example item container */
     display: flex; /* Use flexbox for layout */
+    flex-direction: row-reverse; /* Reverse the order of flex items (moves logo to the right) */
     gap: 20px; /* Space between logo and content */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
