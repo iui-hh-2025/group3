@@ -231,7 +231,7 @@ body {
 
 .why-ai-image img {
     max-width: 100%;
-    height: 752px;
+    height: auto;
 }
 
 
