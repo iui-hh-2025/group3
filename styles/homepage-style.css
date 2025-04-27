@@ -34,6 +34,13 @@ body {
     color: #333;
 }
 
+.logo {
+    height: 20px; /* Set a height for the logo */
+    width: auto; /* Maintain aspect ratio */
+    /* Optional: Adjust vertical alignment if needed, though align-items: center should handle it */
+    vertical-align: middle;
+}
+
 .site-nav ul {
     list-style: none;
     padding: 0;
