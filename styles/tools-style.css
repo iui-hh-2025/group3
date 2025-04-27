@@ -322,7 +322,7 @@ section {
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
-    .site-header .container {
+ .site-header .container {
         flex-direction: column;
         text-align: center;
         align-items: flex-start; /* Align items to the start on mobile */
