@@ -16,18 +16,23 @@
     <header class="site-header">
         <div class="container">
             <div class="site-title">
-                 <img src="../images/mainlogo.webp" alt="Site Logo" class="logo">
-                AI Tools for Development
-            </div>
-            <nav class="site-nav">
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="../pages/chatbots.html">CHATBOTS</a></li>
-                    <li><a href="../pages/sitebuilders.html">SITEBUILDERS</a></li>
-                    <li><a href="../pages/editors.html">CODE BUILDERS</a></li>
-                    <li><a href="../pages/about.html"><b>ABOUT</b></a></li>
-                </ul>
-            </nav>
+                 <img src="images/mainlogo.webp" alt="Site Logo" class="logo">
+                AI Tools for Development</div>
+<button class="hamburger-icon" aria-label="Toggle navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+
+<nav class="site-nav">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="pages/chatbots.html">CHATBOTS</a></li>
+        <li><a href="pages/sitebuilders.html">SITEBUILDERS</a></li>
+        <li><a href="pages/editors.html">CODE BUILDERS</a></li>
+        <li><a href="pages/about.html"><b>ABOUT</b></a></li>
+    </ul>
+</nav>
         </div>
     </header>
 
@@ -167,6 +172,21 @@
         <div class="container">
             <p>A website created in collaboration with Indiana University and Haaga-Helia students.</p> </div>
     </footer>
+<script>
+    const hamburgerButton = document.querySelector('.hamburger-icon');
+    const siteNav = document.querySelector('.site-nav');
 
+    hamburgerButton.addEventListener('click', () => {
+        siteNav.classList.toggle('active');
+        hamburgerButton.classList.toggle('active');
+    });
+
+    siteNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            siteNav.classList.remove('active');
+            hamburgerButton.classList.remove('active');
+        });
+    });
+</script>
 </body>
 </html>
