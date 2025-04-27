@@ -64,8 +64,8 @@ li {
 
 /* Header Styles */
 .site-header {
-    background-color: #1e1e1f;
-    padding: 1rem 0;
+    background-color: #1e1e1f; /* Keep your background color */
+    padding: 20px 0; /* Increased vertical padding */
 }
 
 .site-header .container {
@@ -255,10 +255,10 @@ section {
 
 /* Footer Styles */
 .site-footer {
-    background-color: #50590d;
+    background-color: #50590d; /* Keep your background color */
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 20px 0; /* Increased vertical padding to match header and reference site */
     font-size: 0.9rem;
 }
 
