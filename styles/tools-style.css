@@ -154,7 +154,7 @@ section {
 
 .overview-section,
 .additional-info-section {
-    background-color: var(--bg-light); /* Use the main background color */
+    background-color: #f0f0f0; /* Use the main background color */
 }
 
 .examples-section {
@@ -163,7 +163,7 @@ section {
 }
 
 .examples-section h3 {
-     text-align: center;
+     text-align: left;
      margin-bottom: 30px;
 }
 
