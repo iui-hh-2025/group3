@@ -147,6 +147,21 @@
         <div class="container">
             <p>A website created in collaboration with Indiana University and Haaga-Helia students.</p> </div>
     </footer>
+<script>
+    const hamburgerButton = document.querySelector('.hamburger-icon');
+    const siteNav = document.querySelector('.site-nav');
 
+    hamburgerButton.addEventListener('click', () => {
+        siteNav.classList.toggle('active');
+        hamburgerButton.classList.toggle('active');
+    });
+
+    siteNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            siteNav.classList.remove('active');
+            hamburgerButton.classList.remove('active');
+        });
+    });
+</script>
 </body>
 </html>
