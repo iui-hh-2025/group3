@@ -182,7 +182,7 @@ section {
 
 /* Specific style for H2 in examples section */
 .examples-section h2 {
-    color: #e6a169; /* Set H2 in examples section to the desired color */
+    color: #fff; /* Set H2 in examples section to the desired color */
 }
 
 .examples-section h3 {
