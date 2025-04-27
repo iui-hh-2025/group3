@@ -173,6 +173,7 @@ section {
 .additional-info-section {
     background-color: #f0f0f0; /* Use a light background color */
     padding-bottom: 0; /* Removed padding from the bottom of these sections */
+    margin-bottom: 0; /* Ensure no margin at the bottom */
 }
 
 .examples-section {
@@ -294,6 +295,7 @@ section {
     padding: 1rem 0; /* Vertical padding for footer height */
     font-size: 0.9rem;
     margin-top: 0; /* Removed margin-top from the footer */
+    padding-top: 0; /* Ensure no padding at the top */
 }
 
 /* --- Responsive Adjustments --- */
