@@ -1,24 +1,23 @@
-/* Basic Reset and Body Styles */
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif; /* Using the optional Google Font */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333; /* Default text color */
+    color: #333;
 }
 
 *, *::before, *::after {
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
 }
 
 .container {
-    width: 90%; /* Or a fixed max-width */
-    max-width: 1100px; /* Maximum width of content */
-    margin: 0 auto; /* Center the container */
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 /* Header Styles */
 .site-header {
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #f0f0f0;
     padding: 1rem 0;
 }
 
@@ -26,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
 }
 
 .site-title {
@@ -81,7 +80,7 @@ body {
 
 .btn {
     display: inline-block;
-    background-color: #5a5a7a; /* Approximate dark blue/purple */
+    background-color: #5a5a7a;
     color: #fff;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -95,19 +94,19 @@ body {
 
 /* Mission Section */
 .mission-section {
-    background-color: #fff; /* White background */
+    background-color: #fff; 
     padding: 3rem 0;
 }
 
 .mission-box {
-    background-color: #ffad69; /* Approximate orange color */
+    background-color: #ffad69;
     padding: 2rem 2rem;
     text-align: center;
-    max-width: 1200px; /* Adjust this value if you need it wider or narrower */
-    margin: 0 auto; /* Center the orange box */
+    max-width: 1200px; 
+    margin: 0 auto; 
     border-radius: 8px;
-    width: auto; /* Ensure it's not fixed width */
-    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+    width: auto; 
+    box-sizing: border-box; 
 }
 
 .mission-section h2 {
@@ -125,8 +124,8 @@ body {
 
 /* Featured Tools Section */
 .featured-tools-section {
-    background-color: #4a6a8a; /* Background color of the entire section */
-    color: #fff; /* Default text color for the section */
+    background-color: #4a6a8a;
+    color: #fff; 
     padding: 3rem 0;
     text-align: center;
 }
@@ -144,7 +143,7 @@ body {
 
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid for cards */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 20px;
     margin-top: 2rem;
     width: auto;
@@ -155,47 +154,45 @@ body {
 }
 
 .tool-card {
-    /* No background color here, backgrounds are on inner divs */
     border-radius: 8px;
-    overflow: hidden; /* Crucial for rounded corners on inner elements */
-    display: flex; /* Flex container for stacking image area and text area */
+    overflow: hidden; 
+    display: flex; 
     flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: auto; /* Allow grid to control width */
-    max-width: 100%; /* Don't exceed grid cell */
-    height: auto; /* Height will be determined by content */
+    width: auto;
+    max-width: 100%; 
+    height: auto;
     box-sizing: border-box;
-    text-align: center; /* Center text in both image and text areas */
+    text-align: center;
 }
 
 .tool-card-image-area {
-    /* Removed background-color */
-    padding: 0; /* Removed padding to allow image to go edge-to-edge in this area */
-    flex-grow: 1; /* Allows the image area to take up available vertical space */
-    display: flex; /* Use flex to help center image */
-    justify-content: center; /* Center image horizontally */
-    align-items: center; /* Center image vertically */
+    padding: 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
 }
 
 .tool-card img {
     display: block;
-    width: 100%; /* Image spans the width of its container (.tool-card-image-area) */
-    height: auto; /* Maintain aspect ratio */
-    max-width: none; /* Removed max-width to allow it to fill the space */
-    object-fit: cover; /* Crop image to cover the area if aspect ratio doesn't match */
-    object-position: center; /* Center the image within the area */
-    margin: 0; /* Remove default image margin */
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
 }
 
 .tool-card-text {
-    background-color: #C8EFFF; /* Light blue/cyan background */
-    padding: 1.5rem 1rem; /* Padding inside the text box */
-    color: #333; /* Darker text color for contrast on light background */
-    flex-shrink: 0; /* Prevent the text box from shrinking */
-    width: 100%; /* Ensure text box spans the width */
+    background-color: #C8EFFF;
+    padding: 1.5rem 1rem;
+    color: #333;
+    flex-shrink: 0;
+    width: 100%;
     box-sizing: border-box;
-    text-align: center; /* Ensure text inside this box is centered */
+    text-align: center;
 }
 
 .tool-card-text h3 {
@@ -216,21 +213,20 @@ body {
 
 /* Why Use AI Section */
 .why-ai-section {
-    background-color: #f0f0f0; /* Light gray */
+    background-color: #f0f0f0;
     padding: 3rem 0;
 }
 
 .why-ai-content {
     display: flex;
-    flex-wrap: wrap; /* Allow columns to stack */
-    /* Increased the gap between the image and the text/benefits */
-    gap: 80px; /* Or more if you want greater spacing */
-    align-items: center; /* Vertically align items */
+    flex-wrap: wrap;
+    gap: 80px;
+    align-items: center;
 }
 
 .why-ai-image {
-    flex: 1 1 400px; /* Flex basis of 400px, allows shrinking/growing */
-    text-align: center; /* Center image if smaller than flex basis */
+    flex: 1 1 400px;
+    text-align: center;
 }
 
 .why-ai-image img {
@@ -238,8 +234,9 @@ body {
     height: 752px;
 }
 
+
 .why-ai-benefits {
-    flex: 1 1 400px; /* Flex basis of 400px */
+    flex: 1 1 400px;
 }
 
 .why-ai-benefits h2 {
@@ -256,21 +253,21 @@ body {
 }
 
 .why-ai-benefits li {
-    display: flex; /* Align icon and text */
+    display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
 }
 
 .why-ai-benefits li i {
-    font-size: 1.8rem; /* Icon size */
-    color: #4a6a8a; /* Icon color */
+    font-size: 1.8rem;
+    color: #4a6a8a;
     margin-right: 15px;
-    /* Ensure icon doesn't shrink if text is long */
     flex-shrink: 0;
 }
 
 .why-ai-benefits li div {
-    flex-grow: 1; /* Allow text div to take up remaining space */
+    flex-grow: 1;
+    text-align: left;
 }
 
 .why-ai-benefits li h4 {
@@ -284,7 +281,6 @@ body {
     font-size: 1rem;
     color: #555;
 }
-
 
 /* Footer Styles */
 .site-footer {
@@ -304,11 +300,11 @@ body {
 
     .site-nav ul {
         margin-top: 1rem;
-        justify-content: center; /* Center nav items when stacked */
+        justify-content: center;
     }
 
     .site-nav li {
-        margin: 0 10px; /* Adjust spacing */
+        margin: 0 10px;
     }
 
     .hero-section h1 {
@@ -320,25 +316,24 @@ body {
     }
 
     .why-ai-content {
-        flex-direction: column; /* Stack columns on smaller screens */
+        flex-direction: column;
     }
 
-    .why-ai-image,
-    .why-ai-benefits {
-        flex-basis: auto; /* Allow items to take necessary width */
-        width: 100%; /* Ensure they take full width */
+    .why-ai-image img {
+        height: auto;
     }
+}
 
     .mission-box {
-        padding: 1.5rem; /* Slightly less padding on small screens */
+        padding: 1.5rem;
     }
 
     .tool-card-image-area {
-        padding: 0; /* Keep padding at 0 for smaller screens */
+        padding: 0;
     }
 
     .tool-card img {
-         width: 100%; /* Still fill width */
+         width: 100%;
          height: auto;
          object-fit: cover;
     }
