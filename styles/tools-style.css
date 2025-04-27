@@ -25,18 +25,6 @@ body {
     padding: 20px 0; /* Add vertical padding */
 }
 
-.site-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #f0f0f0;
-}
-
-.logo {
-    height: 40px;
-    width: auto;
-    vertical-align: middle;
-}
-
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-dark); /* Headings color */
     margin-bottom: 15px;
@@ -64,35 +52,51 @@ li {
     margin-bottom: 5px;
 }
 
-/* --- Header Styles --- */
-header {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    padding: 15px 0;
+/* Header Styles */
+.site-header {
+    background-color: #1e1e1f;
+    padding: 1rem 0;
 }
 
-header .container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 10px 0; /* Adjust padding */
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-header h1 {
-    color: var(--text-light);
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.site-nav ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    font-size: 1.5em;
+    display: flex;
 }
 
-header nav a {
-    color: var(--text-light);
+.site-nav li {
     margin-left: 20px;
-    font-size: 0.9em;
-    text-transform: uppercase;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+.site-nav a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+    color: #f88379;
 }
 
 /* --- Hero Section --- */
