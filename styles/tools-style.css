@@ -34,6 +34,12 @@ h2 {
     color: var(--accent-blue); /* Example: make main section titles the accent color */
 }
 
+h4 {
+    color: var(--text-dark); /* Ensure H4s are dark by default */
+    font-size: 1.25em; /* Make H4 slightly bigger */
+    margin-bottom: 15px;
+}
+
 a {
     color: var(--accent-blue);
     text-decoration: none;
@@ -101,36 +107,44 @@ li {
 
 /* --- Hero Section --- */
 .hero {
-    background-color: #e9ecef; /* A slightly different light color for contrast */
-    padding: 40px 0;
-    text-align: center;
+    background-color: var(--bg-light); /* Use the main background color */
+    padding: 60px 0; /* Increase padding for more space */
     margin-bottom: 30px;
 }
 
+.hero .container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: center; /* Vertically align content in the middle */
+    gap: 40px; /* Add space between the text and the image placeholder */
+    /* Remove text-align: center; */
+}
+
+.hero-content {
+    flex: 1; /* Allow text content to take up available space */
+    /* Remove text-align: center if it was inherited */
+    text-align: left; /* Align text to the left */
+}
+
 .hero h2 {
-    color: var(--text-dark); /* Hero title might be dark */
-    margin-bottom: 10px;
+    color: var(--text-dark); /* Keep title dark as in the new image */
+    margin-bottom: 15px; /* Adjust spacing */
+    font-size: 2.5em; /* Make the title larger */
+    line-height: 1.2;
 }
 
 .hero p {
     font-size: 1.1em;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Adjust spacing */
 }
 
 .hero-image-placeholder {
-    width: 80%;
-    max-width: 600px;
-    height: 250px; /* Adjust height as needed */
-    background-color: var(--border-light); /* Placeholder color */
-    margin: 20px auto 0;
-    border: 1px dashed var(--text-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-dark);
-    font-style: italic;
+    flex: 1; /* Allow placeholder to take up available space */
+    min-width: 300px; /* Ensure placeholder has a minimum width */
+    height: 300px; /* Set a fixed height or use aspect ratio */
+    background-color: #e0e0e0; /* A light grey color */
+    /* Remove previous flex/margin/border styles */
+    display: block; /* Ensure it behaves like a block element */
 }
-
 
 /* --- Section Styling --- */
 section {
@@ -239,18 +253,13 @@ section {
 }
 
 
-/* --- Footer Styles --- */
-footer {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+/* Footer Styles */
+.site-footer {
+    background-color: #50590d;
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9em;
+    padding: 1rem 0;
+    font-size: 0.9rem;
 }
 
 /* --- Responsive Adjustments (Basic) --- */
@@ -270,6 +279,22 @@ footer p {
 
     header nav a {
         margin: 0 10px;
+    }
+
+    /* Stack hero content and image on small screens */
+    .hero .container {
+        flex-direction: column;
+        gap: 30px; /* Adjust gap for stacked layout */
+    }
+
+    .hero-content {
+        text-align: center; /* Center text when stacked */
+    }
+
+    .hero-image-placeholder {
+        width: 100%; /* Placeholder takes full width when stacked */
+        height: 200px; /* Adjust height for smaller screens */
+        min-width: auto; /* Remove min-width constraint */
     }
 
     .example-item {
