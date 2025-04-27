@@ -14,7 +14,6 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-light);
     color: var(--text-dark);
 }
 
@@ -31,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    color: var(--accent-blue); /* Example: make main section titles the accent color */
+    color: #e6a169;
 }
 
 h4 {
@@ -164,6 +163,7 @@ section {
 
 .examples-section h3 {
      text-align: left;
+     color: var(--text-dark);
      margin-bottom: 30px;
 }
 
@@ -199,10 +199,6 @@ section {
     font-weight: bold;
 }
 
-.circle-a {
-    background-color: #28a745; /* Example green color */
-    color: var(--text-light);
-}
 
 .external-logo {
      width: 80px; /* Adjust size for external logos */
@@ -218,7 +214,7 @@ section {
 
 .example-content h4 {
      margin-top: 0;
-     color: var(--accent-blue); /* Example title color */
+     color: var(--text-dark);
 }
 
 .pros-cons {
@@ -231,12 +227,12 @@ section {
     flex: 1; /* Each takes equal space */
 }
 
-.advantages h5 {
+.advantages h4 {
     color: #28a745; /* Example green for advantages */
     margin-bottom: 10px;
 }
 
-.limitations h5 {
+.limitations h4 {
     color: #dc3545; /* Example red for limitations */
     margin-bottom: 10px;
 }
