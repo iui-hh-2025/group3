@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
     color: #e6a169;
+    font-size: 2em;
 }
 
 h4 {
@@ -157,7 +158,7 @@ section {
 }
 
 .examples-section {
-    background-color: #f8f9fa; /* Or keep bg-light, depending on desired contrast */
+    background-color: #4a6a8a; /* Or keep bg-light, depending on desired contrast */
     padding-top: 40px;
 }
 
