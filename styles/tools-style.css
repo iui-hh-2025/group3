@@ -143,8 +143,9 @@ body {
 
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Card size */
-    gap: 20px;
+    /* This creates responsive columns. Adjust the minmax value if needed. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between cards */
     margin-top: 2rem;
 }
 
@@ -156,33 +157,34 @@ body {
 }
 
 .tool-card {
-    background-color: #5a7a9a; /* This will be the background of the bottom text part */
+    background-color: #5a7a9a; /* Background color of the bottom text part */
     border-radius: 8px;
-    overflow: hidden; /* Ensures the rounded corners apply correctly to the image/content */
-    display: flex; /* Use flexbox for vertical layout */
+    overflow: hidden; /* Ensures rounded corners */
+    display: flex; /* Use flexbox for vertical layout inside the card */
     flex-direction: column; /* Stack image and text box vertically */
     text-align: center; /* Center content horizontally */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto; /* Let height be determined by content, or set a min/max height if desired */
 }
 
 .tool-card img {
-    display: block; /* Remove extra space below the image */
-    width: 100%; /* Make image fill the width of the card */
-    height: auto; /* Maintain aspect ratio */
-    /* Let the image take up the flexible space in the column */
-    flex-grow: 1;
-    /* Optional: If images have different aspect ratios, object-fit can help */
-    object-fit: cover;
-    object-position: center; /* Center the image within its space */
-    margin-bottom: 0; /* Remove margin previously used to separate image and text */
+    display: block;
+    width: 100%; /* Image fills the width of the card */
+    /* Removed flex-grow: 1 */
+    height: 200px; /* Set a fixed height for the image area, adjust as needed */
+    object-fit: cover; /* Crop image to fit the area */
+    object-position: center;
+    margin-bottom: 0;
 }
 
 .tool-card-text {
-    background-color: #5a7a9a; /* Background color for the text box - same as original card background */
-    padding: 1.5rem; /* Add padding inside the text box */
-    color: #fff; /* Ensure text is white */
-    /* Ensure this section doesn't shrink below its content size */
-    flex-shrink: 0;
+    background-color: #5a7a9a; /* Background of the text box */
+    padding: 1.5rem; /* Padding inside the text box */
+    color: #fff;
+    flex-shrink: 0; /* Prevent shrinking */
+    flex-grow: 0; /* Prevent growing */
+    /* Ensure text box takes minimum required height */
+    height: auto;
 }
 
 .tool-card-text h3 {
@@ -330,9 +332,7 @@ body {
     }
 
     .tool-card img {
-         min-width: unset; /* Remove min-width restriction */
-         width: 100%; /* Fill card width */
-         height: auto;
-         object-fit: cover; /* Maintain cover */
+         height: 150px; /* Adjust image height on smaller screens */
+         object-fit: cover;
     }
 }
