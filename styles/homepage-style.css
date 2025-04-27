@@ -17,7 +17,7 @@ body {
 
 /* Header Styles */
 .site-header {
-    background-color: #f0f0f0;
+    background-color: #1e1e1f;
     padding: 1rem 0;
 }
 
@@ -31,7 +31,7 @@ body {
 .site-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: #f0f0f0;
 }
 
 .logo {
@@ -53,7 +53,7 @@ body {
 
 .site-nav a {
     text-decoration: none;
-    color: #555;
+    color: #f0f0f0;
     font-weight: bold;
     transition: color 0.3s ease;
 }
