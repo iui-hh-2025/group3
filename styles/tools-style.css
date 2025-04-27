@@ -118,6 +118,7 @@ li {
 .hero {
     background-color: #fff; /* Use the main background color (white) */
     padding: 60px 0; /* Increase padding for more space */
+    margin-bottom: 30px;
 }
 
 .hero .container {
@@ -171,6 +172,7 @@ section {
 .overview-section,
 .additional-info-section {
     background-color: #f0f0f0; /* Use a light background color */
+    padding-bottom: 0; /* Removed padding from the bottom of these sections */
 }
 
 .examples-section {
@@ -211,7 +213,8 @@ section {
     flex-direction: column; /* Stack logos vertically */
     align-items: center;
     justify-content: flex-start; /* Align logo to the top */
-    padding: 20px; /* Add padding around the logo container */
+    padding-right: 30px;
+    padding-top: 35px;
     /* Removed margin-right */
     width: 120px; /* Give the logo container a fixed width */
     box-sizing: border-box; /* Include padding in width */
@@ -238,9 +241,11 @@ section {
 
 
 .example-content {
-    flex-grow: 1; /* Allow content to take up remaining space */
-    padding: 20px; /* Add padding all around the content */
-    box-sizing: border-box; /* Include padding in the element's total width */
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .example-content h3,
@@ -288,7 +293,7 @@ section {
     text-align: center;
     padding: 1rem 0; /* Vertical padding for footer height */
     font-size: 0.9rem;
-    margin-top: 40px; /* Add space above the footer */
+    margin-top: 0; /* Removed margin-top from the footer */
 }
 
 /* --- Responsive Adjustments --- */
