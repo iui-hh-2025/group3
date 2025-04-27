@@ -1,349 +1,279 @@
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
+/* --- Color Variables (from https://iui-hh-2025.github.io/group3/index.html) --- */
+:root {
+    --bg-light: #f8f9fa;
+    --text-dark: #212529;
+    --accent-blue: #0d6efd;
+    --bg-dark: #343a40;
+    --text-light: #ffffff;
+    --border-light: #dee2e6;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+/* --- General Styles --- */
+body {
+    font-family: sans-serif; /* Or use a font like 'Roboto' if linked */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
 }
 
 .container {
     width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1000px; /* Limit content width for readability */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Add vertical padding */
 }
 
-/* Header Styles */
-.site-header {
-    background-color: #f0f0f0;
-    padding: 1rem 0;
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark); /* Headings color */
+    margin-bottom: 15px;
 }
 
-.site-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+h2 {
+    color: var(--accent-blue); /* Example: make main section titles the accent color */
 }
 
-.site-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
 }
 
-.site-nav ul {
-    list-style: none;
-    padding: 0;
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* --- Header Styles --- */
+header {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 15px 0;
+}
+
+header .container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 0; /* Adjust padding */
+}
+
+header h1 {
+    color: var(--text-light);
     margin: 0;
-    display: flex;
+    font-size: 1.5em;
 }
 
-.site-nav li {
+header nav a {
+    color: var(--text-light);
     margin-left: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
 }
 
-.site-nav a {
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
-    transition: color 0.3s ease;
+header nav a:hover {
+    text-decoration: underline;
 }
 
-.site-nav a:hover {
-    color: #000;
-}
-
-/* Hero Section */
-.hero-section {
-    background-color: #f88379;
-    color: #fff;
+/* --- Hero Section --- */
+.hero {
+    background-color: #e9ecef; /* A slightly different light color for contrast */
+    padding: 40px 0;
     text-align: center;
-    padding: 4rem 0;
+    margin-bottom: 30px;
 }
 
-.hero-section h1 {
-    margin-top: 0;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.hero h2 {
+    color: var(--text-dark); /* Hero title might be dark */
+    margin-bottom: 10px;
 }
 
-.hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #5a5a7a;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #4a4a6a;
-}
-
-/* Mission Section */
-.mission-section {
-    background-color: #fff; 
-    padding: 3rem 0;
-}
-
-.mission-box {
-    background-color: #ffad69;
-    padding: 2rem 2rem;
-    text-align: center;
-    max-width: 1200px; 
-    margin: 0 auto; 
-    border-radius: 8px;
-    width: auto; 
-    box-sizing: border-box; 
-}
-
-.mission-section h2 {
-    margin-top: 0;
-    font-size: 2rem;
-    color: #333;
-}
-
-.mission-section p {
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    margin-bottom: 0;
-}
-
-
-/* Featured Tools Section */
-.featured-tools-section {
-    background-color: #4a6a8a;
-    color: #fff; 
-    padding: 3rem 0;
-    text-align: center;
-}
-
-.featured-tools-section h2 {
-    margin-top: 0;
-    font-size: 2rem;
-    color: #fff;
-}
-
-.featured-tools-section p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-.tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 20px;
-    margin-top: 2rem;
-    width: auto;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-}
-
-.tool-card {
-    border-radius: 8px;
-    overflow: hidden; 
-    display: flex; 
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: auto;
-    max-width: 100%; 
-    height: auto;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.tool-card-image-area {
-    padding: 0;
-    flex-grow: 1;
+.hero-image-placeholder {
+    width: 80%;
+    max-width: 600px;
+    height: 250px; /* Adjust height as needed */
+    background-color: var(--border-light); /* Placeholder color */
+    margin: 20px auto 0;
+    border: 1px dashed var(--text-dark);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    color: var(--text-dark);
+    font-style: italic;
 }
 
-.tool-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: none;
-    object-fit: cover;
-    object-position: center;
-    margin: 0;
+
+/* --- Section Styling --- */
+section {
+    padding: 20px 0;
+    margin-bottom: 30px;
 }
 
-.tool-card-text {
-    background-color: #C8EFFF;
-    padding: 1.5rem 1rem;
-    color: #333;
-    flex-shrink: 0;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
+.overview-section,
+.additional-info-section {
+    background-color: var(--bg-light); /* Use the main background color */
 }
 
-.tool-card-text h3 {
-    margin-top: 0;
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
-    color: #333;
-    font-weight: 700;
+.examples-section {
+    background-color: #f8f9fa; /* Or keep bg-light, depending on desired contrast */
+    padding-top: 40px;
 }
 
-.tool-card-text p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 0.9rem;
-    color: #555;
-    font-weight: 500;
+.examples-section h3 {
+     text-align: center;
+     margin-bottom: 30px;
 }
 
-/* Why Use AI Section */
-.why-ai-section {
-    background-color: #f0f0f0;
-    padding: 3rem 0;
+/* --- Example Item Styling --- */
+.example-item {
+    background-color: var(--text-light); /* White background for example boxes */
+    border: 1px solid var(--border-light);
+    margin-bottom: 30px;
+    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Space between logo and content */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.why-ai-content {
+.example-logo-container {
+    flex-shrink: 0; /* Prevent logo container from shrinking */
     display: flex;
-    flex-wrap: wrap;
-    gap: 80px;
+    flex-direction: column; /* Stack logos vertically */
     align-items: center;
+    gap: 10px; /* Space between stacked logos */
+    padding-top: 10px; /* Add some space at the top */
 }
 
-.why-ai-image {
-    flex: 1 1 400px;
-    text-align: center;
-}
-
-.why-ai-image img {
-    max-width: 100%;
-    height: 752px;
-}
-
-
-.why-ai-benefits {
-    flex: 1 1 400px;
-}
-
-.why-ai-benefits h2 {
-    margin-top: 0;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
-
-.why-ai-benefits ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.why-ai-benefits li {
+.example-logo {
+    width: 60px; /* Size of the logo/circle */
+    height: 60px;
+    border-radius: 50%; /* Make it circular */
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
+    font-size: 2em;
+    font-weight: bold;
 }
 
-.why-ai-benefits li i {
-    font-size: 1.8rem;
-    color: #4a6a8a;
-    margin-right: 15px;
-    flex-shrink: 0;
+.circle-a {
+    background-color: #28a745; /* Example green color */
+    color: var(--text-light);
 }
 
-.why-ai-benefits li div {
-    flex-grow: 1;
-    text-align: left;
+.external-logo {
+     width: 80px; /* Adjust size for external logos */
+     height: auto; /* Maintain aspect ratio */
+     border-radius: 0; /* Remove border-radius for image logos */
+     background-color: transparent; /* No background for images */
 }
 
-.why-ai-benefits li h4 {
-    margin: 0 0 0.3rem 0;
-    font-size: 1.2rem;
-    color: #333;
+
+.example-content {
+    flex-grow: 1; /* Allow content to take up remaining space */
 }
 
-.why-ai-benefits li p {
+.example-content h4 {
+     margin-top: 0;
+     color: var(--accent-blue); /* Example title color */
+}
+
+.pros-cons {
+    display: flex;
+    gap: 20px; /* Space between advantages and limitations */
+    margin-top: 15px;
+}
+
+.advantages, .limitations {
+    flex: 1; /* Each takes equal space */
+}
+
+.advantages h5 {
+    color: #28a745; /* Example green for advantages */
+    margin-bottom: 10px;
+}
+
+.limitations h5 {
+    color: #dc3545; /* Example red for limitations */
+    margin-bottom: 10px;
+}
+
+.pros-cons ul {
+    list-style: disc; /* Bullet points */
+    padding-left: 20px;
     margin: 0;
-    font-size: 1rem;
-    color: #555;
 }
 
-/* Footer Styles */
-.site-footer {
-    background-color: #50590d;
-    color: #fff;
+.pros-cons li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+
+/* --- Footer Styles --- */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
-/* Responsive Adjustments */
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* --- Responsive Adjustments (Basic) --- */
 @media (max-width: 768px) {
-    .site-header .container {
+    .container {
+        width: 95%;
+    }
+
+    header .container {
         flex-direction: column;
         text-align: center;
     }
 
-    .site-nav ul {
-        margin-top: 1rem;
-        justify-content: center;
+    header h1 {
+        margin-bottom: 10px;
     }
 
-    .site-nav li {
+    header nav a {
         margin: 0 10px;
     }
 
-    .hero-section h1 {
-        font-size: 2rem;
+    .example-item {
+        flex-direction: column; /* Stack logo and content on small screens */
+        align-items: center;
+        text-align: center;
     }
 
-    .hero-section p {
-        font-size: 1rem;
+    .example-logo-container {
+        flex-direction: row; /* Stack logos horizontally in the column layout */
+         gap: 20px;
+         margin-bottom: 15px;
     }
 
-    .why-ai-content {
-        flex-direction: column;
+     .pros-cons {
+        flex-direction: column; /* Stack pros and cons */
+        gap: 15px;
     }
 
-    .why-ai-image img {
-        height: auto;
+    .advantages, .limitations {
+        text-align: left; /* Align text left within stacked boxes */
     }
-}
-
-    .mission-box {
-        padding: 1.5rem;
-    }
-
-    .tool-card-image-area {
-        padding: 0;
-    }
-
-    .tool-card img {
-         width: 100%;
-         height: auto;
-         object-fit: cover;
-    }
-     .tool-card-text {
-         padding: 1rem 0.8rem;
-     }
-     .tool-card-text h3 {
-         font-size: 1.1rem;
-     }
-     .tool-card-text p {
-         font-size: 0.8rem;
-     }
 }
