@@ -26,12 +26,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--text-dark); /* Headings color */
+    color: var(--text-dark); /* Default Headings color */
     margin-bottom: 15px;
 }
 
+/* Specific H2 style - this will now be overridden by more specific rules */
 h2 {
-    color: #e6a169; /* Your specific H2 color */
+    /* color: #e6a169; Removed this general override */
     font-size: 2em;
 }
 
@@ -168,15 +169,15 @@ section {
     padding-top: 40px;
 }
 
-.examples-section h2,
-.examples-section h3 {
-    color: var(--text-light); /* Ensure headings in this section are light */
+/* Specific style for H2 in examples section */
+.examples-section h2 {
+    color: #e6a169; /* Set H2 in examples section to the desired color */
 }
 
-
 .examples-section h3 {
-     text-align: left;
-     margin-bottom: 30px;
+    color: var(--text-light); /* Ensure H3 in this section is light */
+    text-align: left;
+    margin-bottom: 30px;
 }
 
 /* --- Example Item Styling --- */
