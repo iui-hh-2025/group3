@@ -59,7 +59,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background-color: #e0a0a0; /* Approximate reddish color from image */
+    background-color: #F88379;
     color: #fff;
     text-align: center;
     padding: 4rem 0;
@@ -81,7 +81,7 @@ body {
 
 .btn {
     display: inline-block;
-    background-color: #5a5a7a; /* Approximate dark blue/purple */
+    background-color: #5a5a7a;
     color: #fff;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -95,7 +95,7 @@ body {
 
 /* Mission Section */
 .mission-section {
-    background-color: #f8d8b0; /* Approximate orange color */
+    background-color: #F88379; 
     padding: 3rem 0;
     text-align: center;
 }
@@ -230,7 +230,7 @@ body {
 
 /* Footer Styles */
 .site-footer {
-    background-color: #333; /* Dark background */
+    background-color: #F88379;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
