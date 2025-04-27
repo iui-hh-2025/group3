@@ -35,12 +35,12 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5em; /* Make H4 slightly bigger */
+    font-size: 1.3em; /* Make H4 slightly bigger */
 }
 
 h4 {
     color: var(--text-dark); /* Ensure H4s are dark by default */
-    font-size: 1.2em; /* Make H4 slightly bigger */
+    font-size: 1.1em; /* Make H4 slightly bigger */
     margin-bottom: 15px;
 }
 
