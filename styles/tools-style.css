@@ -100,13 +100,15 @@ body {
 }
 
 .mission-box {
-    background-color: #ffad69; /* Approximate orange color */
-    /* Increased padding to make the box longer vertically */
-    padding: 3rem 1rem; /* 3rem top/bottom, 2rem left/right */
+    background-color: #f8d8b0; /* Approximate orange color */
+    padding: 3rem 2rem; /* Padding inside the orange box (top/bottom 3rem, left/right 2rem) */
     text-align: center;
-    max-width: 800px; /* Control the width of the orange box */
+    /* Ensure max-width allows it to be wide enough */
+    max-width: 800px; /* Adjust this value if you need it wider or narrower */
     margin: 0 auto; /* Center the orange box */
-    border-radius: 8px; /* Optional: Add rounded corners */
+    border-radius: 8px;
+    /* Ensure no conflicting width properties are applied */
+    width: auto;
 }
 
 .mission-section h2 {
@@ -117,8 +119,8 @@ body {
 
 .mission-section p {
     font-size: 1.1rem;
-    margin-top: 1rem; /* Add space below heading */
-    margin-bottom: 0; /* Remove bottom margin if not needed */
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 
@@ -138,45 +140,54 @@ body {
 
 .featured-tools-section p {
     font-size: 1.1rem;
-    margin-bottom: 2rem; /* Space below the section description */
+    margin-bottom: 2rem;
 }
 
 .tools-grid {
-    display: grid;
-    /* Keep the grid layout for side-by-side cards */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax slightly back */
+    display: grid; /* This is crucial for the grid layout */
+    /* Defines columns: auto-fit creates as many columns as can fit,
+       each being at least 280px wide, up to 1fr (fraction of available space) */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px; /* Space between cards */
     margin-top: 2rem;
+    /* Ensure the grid container doesn't have properties preventing the grid */
+    width: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; /* Center the grid if it's narrower than its container */
 }
 
 .tool-card {
     background-color: #5a7a9a; /* Background color for the entire card */
-    padding: 2rem; /* Add padding inside the card */
+    padding: 2rem; /* Padding inside the card */
     border-radius: 8px;
     text-align: center; /* Center content inside the card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Removed display: flex, flex-direction, overflow: hidden */
+    /* Ensure cards don't override grid behavior or force full width */
+    width: auto;
+    max-width: 100%;
+    height: auto; /* Let height be determined by content */
 }
 
 .tool-card img {
-    display: block; /* Make image a block element */
-    /* Set a max-width appropriate for the icons/images in the original design */
-    max-width: 100px;
+    display: block;
+    /* Set a max-width appropriate for the icons/images */
+    max-width: 100px; /* Adjust based on your actual image size */
     height: auto;
     /* Center the image horizontally */
     margin: 0 auto 1rem auto; /* 0 top, auto left/right (centers), 1rem bottom */
 }
 
 .tool-card h3 {
-    margin-top: 0; /* Remove default top margin */
+    margin-top: 0;
     font-size: 1.3rem;
-    margin-bottom: 0.5rem; /* Space below heading */
+    margin-bottom: 0.5rem;
     color: #fff;
 }
 
 .tool-card p {
-    margin-top: 0; /* Remove default top margin */
-    margin-bottom: 0; /* Remove default bottom margin */
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 1rem;
     color: #ccc;
 }
