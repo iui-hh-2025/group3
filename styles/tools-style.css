@@ -151,6 +151,7 @@ li {
     justify-content: center;
     align-items: center;
     overflow: hidden; /* Hide any overflow */
+    max-height: 300px; /* Set a maximum height for the image container */
 }
 
 .hero-image img { /* Added style for the image inside the container */
@@ -158,8 +159,7 @@ li {
     max-width: 100%; /* Ensure image doesn't exceed container width */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the container while maintaining aspect ratio */
-    width: 100%; /* Make image take full width of its container */
-    height: 100%; /* Make image take full height of its container */
+    /* Removed width: 100% and height: 100% */
 }
 
 
@@ -323,6 +323,7 @@ section {
         width: 100%; /* Placeholder takes full width when stacked */
         height: 200px; /* Adjust height for smaller screens */
         min-width: auto; /* Remove min-width constraint */
+        max-height: none; /* Remove max-height when stacked */
     }
 
     .example-item {
