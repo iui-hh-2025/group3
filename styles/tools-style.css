@@ -203,6 +203,7 @@ section {
     align-items: center;
     justify-content: flex-start; /* Align logo to the top */
     padding: 20px; /* Add padding around the logo container */
+    margin-right: 20px;
     width: 120px; /* Give the logo container a fixed width */
     box-sizing: border-box; /* Include padding in width */
 }
@@ -229,8 +230,10 @@ section {
 
 .example-content {
     flex-grow: 1; /* Allow content to take up remaining space */
-    padding: 20px; /* Add padding all around the content */
-    box-sizing: border-box; /* Include padding in the element's total width */
+    box-sizing: border-box;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .example-content h3,
