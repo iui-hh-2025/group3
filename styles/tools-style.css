@@ -107,7 +107,7 @@ li {
 
 /* --- Hero Section --- */
 .hero {
-    background-color: var(--bg-light); /* Use the main background color */
+    background-color: #fff; /* Use the main background color */
     padding: 60px 0; /* Increase padding for more space */
     margin-bottom: 30px;
 }
