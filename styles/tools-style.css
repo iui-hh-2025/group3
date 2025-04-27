@@ -236,6 +236,10 @@ section {
     padding-bottom: 30px;
 }
 
+.example-content h2 {
+color: var(--text-dark);
+}
+
 .example-content h3,
 .example-content h4 {
      margin-top: 0;
