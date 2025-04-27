@@ -95,7 +95,7 @@ body {
 
 /* Mission Section */
 .mission-section {
-    background-color: #F88379; 
+    background-color: #FFAD69; 
     padding: 3rem 0;
     text-align: center;
 }
@@ -114,7 +114,7 @@ body {
 
 /* Featured Tools Section */
 .featured-tools-section {
-    background-color: #4a6a8a; /* Approximate dark blue */
+    background-color: #4a6a8a;
     color: #fff;
     padding: 3rem 0;
     text-align: center;
@@ -230,7 +230,7 @@ body {
 
 /* Footer Styles */
 .site-footer {
-    background-color: #F88379;
+    background-color: #50590D;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
