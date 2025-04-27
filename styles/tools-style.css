@@ -15,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-dark);
+    background-color: var(--bg-light); /* Ensure body has light background */
 }
 
 .container {
@@ -144,18 +145,28 @@ li {
     margin-bottom: 0; /* Adjust spacing */
 }
 
-.hero-image-placeholder {
-    flex: 1; /* Allow placeholder to take up available space */
-    min-width: 300px; /* Ensure placeholder has a minimum width */
-    height: 300px; /* Set a fixed height or use aspect ratio */
-    background-color: #e0e0e0; /* A light grey color */
-    display: block; /* Ensure it behaves like a block element */
+.hero-image { /* Changed from .hero-image-placeholder */
+    flex: 1; /* Allow image container to take up available space */
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide any overflow */
 }
+
+.hero-image img { /* Added style for the image inside the container */
+    display: block;
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    width: 100%; /* Make image take full width of its container */
+    height: 100%; /* Make image take full height of its container */
+}
+
 
 /* --- Section Styling --- */
 section {
-    margin-bottom: 0; /* Removed margin-bottom from sections */
     padding: 40px 0; /* Added vertical padding to sections */
+    margin-bottom: 0; /* Removed margin-bottom from sections */
 }
 
 .overview-section,
@@ -167,7 +178,6 @@ section {
     background-color: #4a6a8a; /* Darker background for contrast */
     color: var(--text-light); /* Light text color for this section */
     padding-top: 40px;
-    padding-bottom:40px;
 }
 
 /* Specific style for H2 in examples section */
@@ -203,7 +213,7 @@ section {
     align-items: center;
     justify-content: flex-start; /* Align logo to the top */
     padding: 20px; /* Add padding around the logo container */
-    margin-right: 20px;
+    /* Removed margin-right */
     width: 120px; /* Give the logo container a fixed width */
     box-sizing: border-box; /* Include padding in width */
 }
@@ -230,14 +240,8 @@ section {
 
 .example-content {
     flex-grow: 1; /* Allow content to take up remaining space */
-    box-sizing: border-box;
-    padding-left: 100px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.example-content h2 {
-color: var(--text-dark);
+    padding: 20px; /* Add padding all around the content */
+    box-sizing: border-box; /* Include padding in the element's total width */
 }
 
 .example-content h3,
@@ -315,7 +319,7 @@ color: var(--text-dark);
         padding: 15px; /* Adjust padding for smaller screens */
     }
 
-    .hero-image-placeholder {
+    .hero-image { /* Changed from .hero-image-placeholder */
         width: 100%; /* Placeholder takes full width when stacked */
         height: 200px; /* Adjust height for smaller screens */
         min-width: auto; /* Remove min-width constraint */
