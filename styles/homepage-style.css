@@ -59,7 +59,7 @@ body {
 }
 
 .site-nav a:hover {
-    color: #f55649;
+    color: #c74a42;
 }
 
 /* Hamburger Icon Styles */
@@ -96,7 +96,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background-color: #f55649;
+    background-color: #c74a42;
     color: #fff;
     text-align: center;
     padding: 4rem 0;
@@ -322,7 +322,7 @@ body {
 
 /* Footer Styles */
 .site-footer {
-    background-color: #289f90;
+    background-color: #16635a;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
